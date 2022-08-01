@@ -3,12 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "pnpm run start:ru",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "start:ru": "PUBLIC_DOMAIN=ru astro dev",
+    "start:en": "PUBLIC_DOMAIN=com astro dev",
+    "deploy:ru": "PUBLIC_DOMAIN=ru pnpm run build && gh-pages -d dist -b gh-pages-ru",
+    "deploy:en": "PUBLIC_DOMAIN=com pnpm run build && gh-pages -d dist -b gh-pages-en"
   },
   "devDependencies": {
-    "astro": "^1.0.0-rc.3"
+    "@astrojs/preact": "^0.5.2",
+    "@astrojs/tailwind": "^0.2.5",
+    "@types/node": "^18.6.3",
+    "astro": "^1.0.0-rc.3",
+    "gh-pages": "^4.0.0",
+    "preact": "^10.6.5"
   }
 }

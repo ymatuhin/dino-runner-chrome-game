@@ -1,0 +1,13 @@
+---
+import { baseLocale, domainLocales } from "../../data/urls";
+import GamePage from "../index.astro";
+
+const { locale } = Astro.params;
+
+export function getStaticPaths() {
+  const otherLocales = domainLocales.filter(locale => locale !== baseLocale);
+  return otherLocales.map(locale => ({ params: { locale } }))
+}
+---
+
+<GamePage locale={locale} />
