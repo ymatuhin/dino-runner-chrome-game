@@ -1,1 +1,11 @@
-<h1>Not found</h1>
+---
+import { baseLocale } from "../data/urls";
+import Layout from "../layouts/base.astro";
+---
+
+<Layout locale={baseLocale}>
+  <div class="my-32 text-center">
+    <h1 class="font-bold text-9xl">404</h1>
+    <h2 class="text-xl">{baseLocale === "ru" ? "Страница не найдена" : "Page not found"}</h2>
+  </div>
+</Layout>

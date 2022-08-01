@@ -4,15 +4,22 @@
   "private": true,
   "scripts": {
     "dev": "pnpm run start:ru",
-    "build": "astro build",
+    "build:ru": "PUBLIC_DOMAIN=ru astro build",
+    "build:com": "PUBLIC_DOMAIN=com astro build",
+    "cname:ru": "echo 'https://dino-runner-chrome-game.ru' > ./dist/CNAME",
+    "cname:com": "echo 'https://dino-runner-chrome-game.com' > ./dist/CNAME",
     "preview": "astro preview",
     "start:ru": "PUBLIC_DOMAIN=ru astro dev",
-    "start:en": "PUBLIC_DOMAIN=com astro dev",
-    "deploy:ru": "PUBLIC_DOMAIN=ru pnpm run build && gh-pages -d dist -b gh-pages-ru",
-    "deploy:en": "PUBLIC_DOMAIN=com pnpm run build && gh-pages -d dist -b gh-pages-en"
+    "start:com": "PUBLIC_DOMAIN=com astro dev",
+    "github:ru": "gh-pages -d dist -b master -r git@github.com:ymatuhin/dino-runner-chrome-game-ru.git",
+    "github:com": "gh-pages -d dist -b master -r git@github.com:ymatuhin/dino-runner-chrome-game-com.git",
+    "deploy": "pnpm run deploy:ru && pnpm run deploy:com",
+    "deploy:ru": "pnpm run build:ru && pnpm run cname:ru && pnpm run github:ru",
+    "deploy:com": "pnpm run build:com && pnpm run cname:com && pnpm run github:com"
   },
   "devDependencies": {
     "@astrojs/preact": "^0.5.2",
+    "@astrojs/sitemap": "^0.3.0",
     "@astrojs/tailwind": "^0.2.5",
     "@types/node": "^18.6.3",
     "astro": "^1.0.0-rc.3",

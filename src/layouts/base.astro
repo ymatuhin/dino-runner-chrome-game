@@ -2,7 +2,7 @@
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { LocaleSelect } from "../components/locale-select";
-import { Metrica } from "../components/metrica";
+import { Metrics } from "../components/metrics";
 import { getAlternate } from "../data/urls";
 
 export interface Props {
@@ -15,8 +15,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const alternate = getAlternate(locale);
 ---
 
-<!DOCTYPE html>
-<html lang={locale}>
+<html lang={locale} class="h-full">
 
 <head>
 	<meta charset="UTF-8" />
@@ -42,13 +41,15 @@ const alternate = getAlternate(locale);
 	</style>
 </head>
 
-<body class="max-w-2xl px-5 py-10 mx-auto text-gray-600 bg-gray-100">
+<body class="flex flex-col h-full max-w-2xl min-h-full px-5 py-10 mx-auto text-gray-600 bg-gray-100">
 	<Header locale={locale} />
-	<slot />
+	<div class="flex-grow">
+		<slot />
+	</div>
 	<Footer locale={locale}>
 		<LocaleSelect client:visible locale={locale} />
 	</Footer>
-	<Metrica />
+	<Metrics />
 </body>
 
 </html>

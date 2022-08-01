@@ -10,7 +10,7 @@ export function Footer({
 }) {
   const { title, subtitle, footer } = home[locale];
   return (
-    <>
+    <div class="flex-shrink-0 flex-grow-0 ">
       <footer class="rounded-lg mt-12 px-5 py-4 bg-white text-sm">
         <div class="flex justify-between">
           <div>
@@ -22,7 +22,7 @@ export function Footer({
           </label>
         </div>
       </footer>
-      <div class="text-center text-xs mt-4 text-gray-400">
+      <div class="text-center text-xs my-4 text-gray-400">
         {baseLocale === "ru"
           ? "Если вы нашли ошибку, пожалуйста, напишите мне об этом."
           : "If you find a typo, please email me about it."}
@@ -32,6 +32,6 @@ export function Footer({
           ym@ymatuhin.ru
         </a>
       </div>
-    </>
+    </div>
   );
 }
