@@ -1,7 +1,15 @@
 .game,
+.redirect-panel,
 [data-ads] {
   position: relative;
   z-index: 1000;
+}
+
+.redirect-panel {
+  z-index: 1001;
+}
+.playing {
+  z-index: 10;
 }
 
 .game-overlay {

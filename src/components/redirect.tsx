@@ -37,12 +37,12 @@ export function Redirect({ locale }: { locale: string }) {
       uk: "Ukrainian",
       be: "Belarusian",
       kk: "Kazakh",
-      zh: "Chinese", // китайский
-      es: "Spanish", // испанский
-      pt: "Portuguese", // Portuguese
-      fr: "French", // French
-      ja: "Japanese", // Japanese
-      de: "German", // German
+      zh: "Chinese",
+      es: "Spanish",
+      pt: "Portuguese",
+      fr: "French",
+      ja: "Japanese",
+      de: "German",
       pl: "Polish",
       ro: "Romanian",
     },
