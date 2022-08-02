@@ -7,7 +7,7 @@
 .redirect-panel {
   z-index: 1001;
 }
-.playing {
+.playing .redirect-panel {
   z-index: 10;
 }
 
