@@ -2,6 +2,7 @@
 import { Ads } from "../components/ads";
 import { Comments } from "../components/Comments";
 import { Assets, Game } from '../components/game';
+import { Redirect } from '../components/redirect';
 import { home } from "../data/translations";
 import { baseLocale } from "../data/urls";
 import Layout from "../layouts/base.astro";
@@ -34,4 +35,6 @@ const t = home[locale];
     <p class="mb-4" set:html={t.about} />
     <p set:html={t.cheats} />
   </main>
+
+  <Redirect client:only locale={locale} />
 </Layout>
