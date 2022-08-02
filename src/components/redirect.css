@@ -1,6 +1,6 @@
 .redirect-panel {
-  -webkit-animation: 0.4s slide-bottom 1s ease-out both;
-  animation: 0.4s slide-bottom 1s ease-out both;
+  -webkit-animation: 0.4s slide-bottom 2s ease-out both;
+  animation: 0.4s slide-bottom 2s ease-out both;
   will-change: transform opacity;
 }
 

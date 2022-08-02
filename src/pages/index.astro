@@ -3,6 +3,7 @@ import { Ads } from "../components/ads";
 import { Comments } from "../components/Comments";
 import { Assets, Game } from '../components/game';
 import { Redirect } from '../components/redirect';
+import "../components/redirect.css";
 import { home } from "../data/translations";
 import { baseLocale } from "../data/urls";
 import Layout from "../layouts/base.astro";
@@ -12,6 +13,8 @@ const t = home[locale];
 ---
 
 <Layout locale={locale} title={t.title} description={t.description}>
+  <Redirect client:only="preact" locale={locale} />
+
   <main>
     <p set:html={t.intro} />
 
@@ -36,5 +39,4 @@ const t = home[locale];
     <p set:html={t.cheats} />
   </main>
 
-  <Redirect client:only locale={locale} />
 </Layout>
