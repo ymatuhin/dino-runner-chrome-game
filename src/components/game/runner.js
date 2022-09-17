@@ -1438,6 +1438,7 @@ Runner.prototype = {
     cancelAnimationFrame(this.raqId);
     this.raqId = 0;
     this.generatedSoundFx.stopAll();
+    this.invert(true);
   },
 
   play() {

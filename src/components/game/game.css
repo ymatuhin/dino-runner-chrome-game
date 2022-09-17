@@ -27,3 +27,11 @@
   opacity: 1;
   z-index: 100;
 }
+
+html {
+  transition: filter 0.3s ease-in-out;
+}
+
+html.inverted {
+  filter: invert(1) hue-rotate(180deg);
+}

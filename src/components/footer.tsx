@@ -10,7 +10,7 @@ export function Footer({
 }) {
   const { title, subtitle, footer } = home[locale];
   return (
-    <div class="flex-shrink-0 flex-grow-0 ">
+    <div class="flex-shrink-0 flex-grow-0">
       <footer class="rounded-lg mt-12 px-5 py-4 bg-white text-sm">
         <div class="flex justify-between">
           <div>

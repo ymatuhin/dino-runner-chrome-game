@@ -1,8 +1,8 @@
 ---
 import { Ads } from "../components/ads";
 import { Comments } from "../components/Comments";
-import { Assets, Game } from '../components/game';
-import { Redirect } from '../components/redirect';
+import { Assets, Game } from "../components/game";
+import { Redirect } from "../components/redirect";
 import "../components/redirect.css";
 import { home } from "../data/translations";
 import { baseLocale } from "../data/urls";
@@ -16,7 +16,7 @@ const t = home[locale];
   <Redirect client:only="preact" locale={locale} />
 
   <main>
-    <p set:html={t.intro} />
+    <p set:html={t.intro}></p>
 
     <div class="my-8">
       <Ads />
@@ -27,16 +27,23 @@ const t = home[locale];
       <Game client:only="preact" />
     </div>
 
-    <p set:html={t.play} />
+    <p set:html={t.play}></p>
 
     <div class="mt-4">
       <Comments discussion={t.discussion} />
     </div>
 
-    <h2 class="mt-12 mb-4 text-2xl font-bold text-gray-800" set:html={t.rulesTitle} />
-    <p class="mb-4" set:html={t.rules} />
-    <p class="mb-4" set:html={t.about} />
-    <p set:html={t.cheats} />
-  </main>
+    <h2
+      class="mt-12 mb-4 text-2xl font-bold text-gray-800"
+      set:html={t.rulesTitle}
+    >
+    </h2>
+    <p class="mb-4" set:html={t.rules}></p>
+    <p class="mb-4" set:html={t.about}></p>
+    <p set:html={t.cheats}></p>
 
+    <!-- <div class="mt-8">
+      <MyProjects locale={locale} />
+    </div> -->
+  </main>
 </Layout>

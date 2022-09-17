@@ -194,3 +194,45 @@ export const home = {
     footer: "Realizat cu dragoste de ymatuhin, e-mail",
   },
 };
+
+export const myProjects = {
+  ru: {
+    title: "Гугл динозаврик",
+  },
+  uk: {
+    title: "Гугл динозаврик",
+  },
+  be: {
+    title: "Гугл динозаврик",
+  },
+  kk: {
+    title: "Гугл динозаврик",
+  },
+  en: {
+    title: "Гугл динозаврик",
+  },
+  zh: {
+    title: "Гугл динозаврик",
+  },
+  es: {
+    title: "Гугл динозаврик",
+  },
+  pt: {
+    title: "Гугл динозаврик",
+  },
+  fr: {
+    title: "Гугл динозаврик",
+  },
+  ja: {
+    title: "Гугл динозаврик",
+  },
+  de: {
+    title: "Гугл динозаврик",
+  },
+  pl: {
+    title: "Гугл динозаврик",
+  },
+  ro: {
+    title: "Гугл динозаврик",
+  },
+};
